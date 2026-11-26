@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sewa Website — Digicat</title>
+<meta name="description" content="Sewa website siap pakai di subdomain digicat.my.id. Subdomain + hosting termasuk, bayar bulanan mulai Rp25.000. Cocok untuk usaha kecil dan toko.">
+<style>
+  :root{
+    --navy:#14263d;
+    --navy-2:#1d3557;
+    --blue:#8fb4d9;
+    --blue-soft:#dbe9f7;
+    --ink:#1c2b3a;
+    --muted:#5a6b7d;
+    --bg:#f4f8fc;
+    --card:#ffffff;
+    --line:#d7e3ef;
+    --cta:#2f6fb2;
+    --cta-hover:#245a92;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  a{color:var(--cta);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+  /* header */
+  header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;max-width:1020px;margin:0 auto}
+  .brand{font-weight:800;font-size:20px;letter-spacing:.5px;color:#fff}
+  .brand span{color:var(--blue)}
+  .nav-links{display:flex;gap:18px;flex-wrap:wrap}
+  .nav-links a{color:#dbe9f7;font-size:14px}
+  .nav-links a:hover{color:#fff}
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:56px 0 64px}
+  .hero h1{font-size:clamp(30px,6vw,46px);line-height:1.15;margin-bottom:14px}
+  .hero h1 span{color:var(--blue)}
+  .hero .sub{font-size:clamp(16px,3vw,19px);color:#dbe9f7;max-width:640px;margin-bottom:8px}
+  .hero .en{font-size:14px;color:var(--blue);margin-bottom:24px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;background:var(--cta);color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;font-size:15px;border:1px solid var(--cta)}
+  .btn:hover{background:var(--cta-hover);text-decoration:none}
+  .btn.ghost{background:transparent;color:#fff;border-color:var(--blue)}
+  .btn.ghost:hover{background:rgba(143,180,217,.15)}
+  /* sections */
+  section{padding:48px 0}
+  h2{font-size:clamp(22px,4vw,28px);color:var(--navy);margin-bottom:10px}
+  .lead{color:var(--muted);max-width:720px;margin-bottom:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+  /* cara kerja */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step .num{display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--blue-soft);color:var(--navy);font-weight:800;align-items:center;justify-content:center;margin-bottom:10px}
+  .step h3{font-size:17px;color:var(--navy);margin-bottom:6px}
+  .step p{font-size:14px;color:var(--muted)}
+  /* harga */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+  .plan{display:flex;flex-direction:column}
+  .plan.pop{border:2px solid var(--cta);position:relative}
+  .plan .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--cta);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;white-space:nowrap}
+  .plan h3{font-size:19px;color:var(--navy)}
+  .plan .price{font-size:32px;font-weight:800;color:var(--navy);margin:8px 0 2px}
+  .plan .price small{font-size:15px;font-weight:600;color:var(--muted)}
+  .plan .usd{font-size:14px;color:var(--muted);margin-bottom:12px}
+  .plan p{font-size:14px;color:var(--muted);flex:1}
+  .plan .btn{margin-top:16px;text-align:center}
+  /* contoh */
+  .contoh{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .contoh .addr{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--blue-soft);color:var(--navy);padding:10px 14px;border-radius:10px;font-size:15px;word-break:break-all}
+  .badge{display:inline-block;background:#fff3cd;color:#7a5b00;border:1px solid #ffe08a;font-size:13px;font-weight:700;padding:4px 10px;border-radius:20px}
+  /* pesan */
+  .order-list{list-style:none}
+  .order-list li{padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .order-list li:last-child{border-bottom:none}
+  /* footer */
+  footer{background:var(--navy);color:#dbe9f7;padding:28px 0;font-size:14px}
+  footer a{color:#fff}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  @media (max-width:720px){
+    .steps,.plans{grid-template-columns:1fr}
+    .nav-links{display:none}
+    section{padding:36px 0}
+    .hero{padding:40px 0 48px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#">DIGI<span>CAT</span></a>
+    <div class="nav-links">
+      <a href="#tentang">Tentang</a>
+      <a href="#paket">Paket</a>
+      <a href="#contoh">Contoh</a>
+      <a href="#pesan">Cara Sewa</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Sewa Website <span>— Digicat</span></h1>
+      <p class="sub">Website siap pakai di subdomain digicat.my.id — tanpa bangun sendiri. Subdomain + hosting termasuk, bayar bulanan.</p>
+      <p class="en">Website Rental — a ready-made website on your own subdomain. Subdomain + hosting included, pay monthly.</p>
+      <div class="cta-row">
+        <a class="btn" href="#paket">Lihat Paket</a>
+        <a class="btn ghost" href="#pesan">Cara Sewa</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang">
+    <div class="wrap">
+      <h2>Apa itu Sewa Website?</h2>
+      <p class="lead">Sewa Website adalah layanan menyewa website siap pakai di subdomain digicat.my.id — misalnya <strong>namatoko.digicat.my.id</strong>. Cocok untuk usaha kecil dan toko yang mau punya website tanpa membangun sendiri.</p>
+      <div class="steps">
+        <div class="card step">
+          <span class="num">1</span>
+          <h3>Website siap pakai</h3>
+          <p>Website sudah jadi dan siap dipakai di subdomain Anda — tidak perlu membangun dari nol.</p>
+        </div>
+        <div class="card step">
+          <span class="num">2</span>
+          <h3>Subdomain + hosting termasuk</h3>
+          <p>Harga sewa sudah termasuk subdomain dan hosting. Tidak ada biaya tambahan untuk keduanya.</p>
+        </div>
+        <div class="card step">
+          <span class="num">3</span>
+          <h3>Bayar bulanan</h3>
+          <p>Sewa dibayar per bulan. Berhenti bayar, website nonaktif.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paket" style="background:#fff">
+    <div class="wrap">
+      <h2>Paket Sewa Website</h2>
+      <p class="lead">Tiga paket, bayar per bulan. Website + subdomain + hosting, sewa bulanan; berhenti bayar, website nonaktif.</p>
+      <div class="plans">
+        <div class="card plan">
+          <h3>Basic</h3>
+          <div class="price">Rp25.000<small>/bln</small></div>
+          <div class="usd">$2/mo</div>
+          <p>Website + subdomain + hosting, sewa bulanan.</p>
+          <a class="btn" href="#pesan">Pesan Basic</a>
+        </div>
+        <div class="card plan pop">
+          <span class="tag">Paling populer</span>
+          <h3>Professional</h3>
+          <div class="price">Rp45.000<small>/bln</small></div>
+          <div class="usd">$3/mo</div>
+          <p>Website + subdomain + hosting, sewa bulanan.</p>
+          <a class="btn" href="#pesan">Pesan Professional</a>
+        </div>
+        <div class="card plan">
+          <h3>Bisnis</h3>
+          <div class="price">Rp75.000<small>/bln</small></div>
+          <div class="usd">$5/mo</div>
+          <p>Website + subdomain + hosting, sewa bulanan.</p>
+          <a class="btn" href="#pesan">Pesan Bisnis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contoh">
+    <div class="wrap">
+      <h2>Contoh Website Sewa</h2>
+      <p class="lead">Website sewa tampil di subdomain digicat.my.id — contohnya seperti ini:</p>
+      <div class="card contoh">
+        <span class="addr">contoh.digicat.my.id</span>
+        <span class="badge">Contoh segera hadir</span>
+      </div>
+      <p style="margin-top:14px;color:var(--muted);font-size:14px">Alamat di atas adalah contoh format subdomain sewa. Halaman contoh sedang disiapkan dan akan tampil di sini setelah aktif.</p>
+    </div>
+  </section>
+
+  <section id="pesan" style="background:#fff">
+    <div class="wrap">
+      <h2>Cara Sewa / Pesan</h2>
+      <p class="lead">Pesan Sewa Website lewat toko Digicat atau email. Sebutkan paket yang dipilih (Basic, Professional, atau Bisnis) dan nama subdomain yang diinginkan.</p>
+      <div class="card">
+        <ul class="order-list">
+          <li><strong>1. Pilih paket</strong> — Basic Rp25.000/bln, Professional Rp45.000/bln, atau Bisnis Rp75.000/bln.</li>
+          <li><strong>2. Pesan lewat toko Digicat</strong> — <a href="https://digicat.std.ai.id/">digicat.std.ai.id</a> (formulir pemesanan di toko).</li>
+          <li><strong>3. Atau lewat email</strong> — <a href="mailto:digicat_store@proton.me">digicat_store@proton.me</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">DIGICAT</strong> — Sewa Website di digicat.my.id</div>
+    <div>
+      <a href="https://digicat.std.ai.id/">Toko Digicat</a> &nbsp;·&nbsp;
+      <a href="mailto:digicat_store@proton.me">digicat_store@proton.me</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
